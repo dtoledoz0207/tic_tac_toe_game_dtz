@@ -1,4 +1,4 @@
-require './board'
+require './tic_tac_toe_game_dtz/board'
 
 class Game
   def initialize(dimension)
@@ -16,7 +16,7 @@ class Game
 
   def restart_game(player1, dimension)
     system('clear')
-    puts " **** Start #{player1 ? 'PLAYER 1' : 'PLAYER 2'} **** "
+    puts " **** #{player1 ? 'PLAYER 1' : 'PLAYER 2'} START **** "
     Board.new(dimension)
   end
 
@@ -64,7 +64,7 @@ class Game
                 end
               end
 
-              if equals_marks_in_diagonal
+              if board.equals_marks_in_diagonal
                 response = show_message_play_again
                 if play_again(response)
                   board = restart_game(!player1, dimension)

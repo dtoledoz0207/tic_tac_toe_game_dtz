@@ -1,5 +1,5 @@
 require "bundler/setup"
-require "tic_tac_toe_game_dtz"
+#require "tic_tac_toe_game_dtz"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
