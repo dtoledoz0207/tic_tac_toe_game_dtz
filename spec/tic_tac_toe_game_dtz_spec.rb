@@ -38,7 +38,7 @@ RSpec.describe Board do
   end
 
   describe '#equals_marks_in_row' do
-    context 'When there are three equals player marks in a row' do
+    context 'When there are equals player marks in a row' do
       it 'is true and one player win' do
         board = Board.new(3)
         board.board = [['O','O','O'], ['_','_','_'], ['_','_','_']]
@@ -49,7 +49,7 @@ RSpec.describe Board do
   end
 
   describe '#equals_marks_in_column' do
-    context 'When there are three equals player marks in a column' do
+    context 'When there are equals player marks in a column' do
       it 'is true and one player win' do
         board = Board.new(3)
         board.board = [['X','_','_'], ['X','_','_'], ['X','_','_']]
@@ -59,5 +59,14 @@ RSpec.describe Board do
     end
   end
 
+  describe '#equals_marks_in_diagonal' do
+    context 'When there are equals player marks in diagonal' do
+      it 'is true and one player win' do
+        board = Board.new(3)
+        board.board = [['O','_','_'], ['_','O','_'], ['_','_','O']]
+        expect(board.equals_marks_in_diagonal).to be true
+      end
+    end
+  end
 
 end

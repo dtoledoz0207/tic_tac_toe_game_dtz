@@ -77,6 +77,25 @@ class Board
     end
   end
 
+  def equals_marks_in_diagonal
+    marks_in_right_diagonal = ''
+    marks_in_left_diagonal = ''
+    @board.each_with_index do |row, index|
+      number_right_to_left_column = index
+      number_left_to_right_column = -(index + 1)
+      marks_in_right_diagonal << row[number_right_to_left_column]
+      marks_in_left_diagonal << row[number_left_to_right_column]
+    end
+
+    if marks_in_right_diagonal == @mark_x_winner || marks_in_left_diagonal == @mark_x_winner
+      puts ' ***** ¡PLAYER 1 IS THE WINNER! ***** '
+      true
+    elsif marks_in_right_diagonal == @mark_o_winner || marks_in_left_diagonal == @mark_o_winner
+      puts ' ***** ¡PLAYER 2 IS THE WINNER! ***** '
+      true
+    end
+  end
+
 end
 #end
 
