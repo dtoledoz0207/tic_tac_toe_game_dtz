@@ -1,4 +1,4 @@
-require './tic_tac_toe_game_dtz/game'
+require 'tic_tac_toe_game_dtz/game'
 
 class TicTacToeGameDtz
   def initialize

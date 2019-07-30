@@ -1,4 +1,4 @@
-require './tic_tac_toe_game_dtz/board'
+require 'tic_tac_toe_game_dtz/board'
 
 class Game
   def initialize(dimension)
@@ -15,7 +15,10 @@ class Game
   end
 
   def restart_game(player1, dimension)
-    system('clear')
+    #system('clear')
+    6.times do
+      puts "===================================="
+    end
     puts " **** #{player1 ? 'PLAYER 1' : 'PLAYER 2'} START **** "
     Board.new(dimension)
   end
