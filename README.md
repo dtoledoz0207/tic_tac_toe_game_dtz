@@ -21,7 +21,7 @@ Or install it yourself as:
 ```ruby
 require 'tic_tac_toe_game_dtz'
 
-game = TicTacToeGameDtz.new
+TicTacToeGameDtz.new
 ```
 
 ## Development
